@@ -1,0 +1,18 @@
+@mixin link-animation {
+  position: relative;
+  display: inline-flex;
+  &::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50%;
+    background-color: currentColor;
+    transition-duration: 0.2s;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}

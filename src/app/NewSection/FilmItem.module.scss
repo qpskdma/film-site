@@ -1,0 +1,49 @@
+.container {
+  position: relative;
+  width: 14.5%;
+  height: 25.3%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  &:hover {
+    cursor: pointer;
+  }
+  .rating {
+    font-weight: 700;
+    position: absolute;
+    top: 3.76%;
+    left: 5.71%;
+    width: 14.29%;
+    height: 7.06%;
+    color: black;
+    background: var(--gradient);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .newSeason {
+    position: absolute;
+    top: 3.76%;
+    left: 22.86%;
+    width: 47.36%;
+    height: 7.06%;
+    background: #09090c99;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .poster {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  p {
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--text-second-color);
+  }
+}

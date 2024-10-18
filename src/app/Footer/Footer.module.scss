@@ -1,0 +1,97 @@
+@import "../../app/mixins";
+
+.container {
+  display: grid;
+  grid-template-columns: 3 (1fr);
+  grid-template-rows: 44px 52px 40px;
+  row-gap: 44px;
+  padding: 52px 64px 52px 0px;
+}
+
+.socialsWrapper,
+.socials,
+.navContainer,
+.navContainer > ul,
+.navOtherInf,
+.warningWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.socialsWrapper {
+  justify-content: space-between;
+  button {
+    font-size: 16px;
+  }
+}
+
+.socials {
+  column-gap: 24px;
+  margin: auto 0;
+}
+.socials span {
+  margin-right: 4px;
+}
+
+.socials span,
+.socials img {
+  opacity: 0.3;
+  transition: 0.2s;
+}
+
+.socials div:hover span,
+.socials div:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.navContainer {
+  border-bottom: 1px solid #ffff;
+  justify-content: space-between;
+  li {
+    @include link-animation;
+    &::after {
+      top: 40%;
+    }
+  }
+}
+
+.navContainer,
+.navContainer > ul,
+.navOtherInf {
+  column-gap: 20px;
+}
+
+.logo {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.warningWrapper {
+  column-gap: 30%;
+  opacity: 0.3;
+}
+
+.warning {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-weight: 400;
+}
+
+.warning > div:first-child {
+  width: 41px;
+  height: 36px;
+  border: 1px solid #ffff;
+  border-radius: 8px;
+  padding: 8px;
+  margin-right: 20px;
+}
+
+.navOtherInf span {
+  @include link-animation;
+  &::after {
+    top: 40%;
+  }
+}

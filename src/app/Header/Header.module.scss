@@ -1,0 +1,45 @@
+@import "../../app/mixins";
+
+.container {
+  font-family: url("../fonts/TTNormsPro-Bold.woff");
+  // width: 100vw;
+  height: 76px;
+  display: grid;
+  //   flex-direction: row;
+  grid-template-columns: minmax(120px, 195px) 294px minmax(20px, 754px) 548px;
+  grid-template-rows: 1;
+  padding: 14px 64px 14px 0px;
+}
+
+.navContainer {
+  font-weight: 500;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 28px;
+  align-items: center;
+  color: var(--text-second-color);
+  a {
+    @include link-animation;
+  }
+}
+
+.active {
+  color: var(--text-color);
+}
+
+.btnsContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.search {
+  background: none;
+}
+
+.promo {
+  margin-top: -4px;
+}

@@ -1,0 +1,76 @@
+.title {
+  font-family: var(--font-druk-wide-cy);
+  font-style: italic;
+  font-size: 28px;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.container {
+  position: relative;
+  height: 504px;
+  .filmsContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.08%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow: hidden;
+  }
+  .filmWrapper {
+    position: static;
+    min-width: 350px;
+    width: 21.55%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:hover {
+      cursor: pointer;
+    }
+    div {
+      width: 25%;
+    }
+    div img {
+      height: 30.44%;
+      width: auto;
+    }
+    > img:nth-child(2) {
+      width: 75%;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 20px;
+    }
+  }
+}
+
+.btn {
+  button {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: 13%;
+    aspect-ratio: 1/1.36363636;
+    background-color: #09090c99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.btnRight {
+  top: 33%;
+  right: 12px;
+}
+
+.btnLeft {
+  top: 33%;
+  left: 12px;
+  img {
+    transform: scaleX(-1);
+  }
+}

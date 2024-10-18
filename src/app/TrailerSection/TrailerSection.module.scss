@@ -1,0 +1,139 @@
+.wrapper {
+  background-position: center center;
+  margin-top: 16px;
+}
+
+.background {
+  position: relative;
+  height: 652px;
+  background: linear-gradient(180deg, rgba(9, 9, 12, 0) 50%, #09090c 92.09%),
+    linear-gradient(180deg, #09090c 0%, rgba(15, 15, 15, 0) 50%),
+    linear-gradient(90deg, #09090c 21.09%, rgba(9, 9, 12, 0) 50%);
+  margin-bottom: 48px;
+  .info {
+    position: absolute;
+    bottom: 0px;
+  }
+  .description {
+    span {
+      position: relative;
+      margin-right: 20px;
+      font-size: 20px;
+      font-weight: 450;
+    }
+    span::after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      right: -12px;
+      top: 45%;
+      background-image: url("/Ellipse.svg");
+      background-repeat: no-repeat;
+    }
+    span:last-child::after {
+      width: 0;
+    }
+    span:first-child {
+      padding: 5px 8px;
+      border-radius: 8px;
+      background: #ffffff1a;
+    }
+  }
+}
+
+.trailers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  column-gap: 16px;
+  margin-top: 24px;
+  &:hover {
+    cursor: pointer;
+  }
+  .imgWrapper {
+    position: relative;
+  }
+  .imgBackground {
+    position: absolute;
+    top: 0;
+    width: 256px;
+    height: 152px;
+    border-radius: 16px;
+    background-color: rgba(9, 9, 12, 0.5);
+  }
+  img {
+    border-radius: 16px;
+    object-fit: cover;
+  }
+}
+
+.activeTrailer {
+  position: relative;
+}
+
+.activeTrailer::after {
+  content: "";
+  position: absolute;
+  width: 177px;
+  height: 4px;
+  top: 100%;
+  left: 0;
+  // translate: 50%;
+  transition-duration: 0.2s;
+  background-size: cover;
+  border-radius: 7px;
+  background: var(--gradient-second);
+}
+
+.fadeOut {
+  animation: fade-out 1s;
+}
+
+.fadeIn {
+  animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+  0% {
+    background: rgba(0, 0, 0, 1);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background: rgba(0, 0, 0, 1);
+  }
+}
+
+.descOut {
+  animation: desc-out 1s;
+}
+
+.descIn {
+  animation: desc-in 2s;
+}
+
+@keyframes desc-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes desc-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
