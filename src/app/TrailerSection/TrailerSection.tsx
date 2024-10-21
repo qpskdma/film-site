@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./TrailerSection.module.scss";
 import { Trailer, trailers } from "./trailers";
 import ActiveTrailer from "./ActiveTrailer";
@@ -7,7 +7,10 @@ import ActiveTrailer from "./ActiveTrailer";
 interface TrailerSectionProps {}
 
 const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
+  const divRef = useRef(null);
   const [isFadingOut, setIsFadingOut] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [translateIndex, setTranslateIndex] = useState("");
   const [activeTrailer, setActiveTrailer] = useState<Trailer | null>(null);
 
   useEffect(() => {
@@ -16,12 +19,17 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
     }
   }, [trailers]);
 
-  const changeTrailer = (film: Trailer) => {
-    if (name !== activeTrailer?.name) {
+  const changeTrailer = (event: MouseEvent, film: Trailer, index: number) => {
+    // const rect = divRef.current.getBoundingClientRect();
+    if (film.name !== activeTrailer?.name) {
+      const num = activeIndex - index;
+      setActiveIndex(index);
+      setTranslateIndex(() => -num * 272 + "px");
       setIsFadingOut(true);
       setTimeout(() => {
         setActiveTrailer(film);
         setIsFadingOut(false);
+        setTranslateIndex("0px");
       }, 1000);
     }
   };
@@ -57,7 +65,8 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
               <div
                 className={`${styles.description} ${
                   isFadingOut ? styles.descOut : styles.descIn
-                }`}
+                }
+                `}
               >
                 <span>{activeTrailer?.rating}</span>
                 <span>{activeTrailer?.year}</span>
@@ -68,30 +77,36 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
             ) : null}
             <div className={styles.trailers}>
               {trailers.map((element, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`${styles.imgWrapper} ${
-                      activeTrailer?.name === element.name
-                        ? styles.activeTrailer
-                        : null
-                    }`}
-                    onClick={() => {
-                      changeTrailer(element);
-                    }}
-                  >
-                    <img
-                      src={`/Trailers/${element.poster}`}
-                      width={"256px"}
-                      height={"152px"}
-                      alt=""
-                      loading="lazy"
-                    />
-                    {activeTrailer?.name === element.name ? null : (
+                if (activeTrailer?.name === element.name) {
+                  return (
+                    <div ref={divRef} key={index}>
+                      <ActiveTrailer
+                        film={activeTrailer}
+                        changeTrailer={changeTrailer}
+                        getTranslateValue={translateIndex}
+                      />
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div
+                      key={index}
+                      className={styles.imgWrapper}
+                      onClick={(event) => {
+                        changeTrailer(event, element, index);
+                      }}
+                    >
+                      <img
+                        src={`/Trailers/${element.poster}`}
+                        width={"256px"}
+                        height={"152px"}
+                        alt={element.name}
+                        loading="lazy"
+                      />
                       <div className={styles.imgBackground}></div>
-                    )}
-                  </div>
-                );
+                    </div>
+                  );
+                }
               })}
             </div>
           </div>

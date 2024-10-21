@@ -48,10 +48,10 @@ export const trailers: Trailer[] = [
     ageLimit: "18+",
   },
   {
-    name: "Revenge",
+    name: "Revenge of the Bridesmaids",
     poster: "Revenge.png",
-    rating: 7.9,
-    year: 2024,
+    rating: 7,
+    year: 2010,
     genre: "Комедия",
     country: "США",
     ageLimit: "18+",

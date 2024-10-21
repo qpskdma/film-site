@@ -1,26 +1,36 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Trailer } from "./trailers";
 import styles from "./TrailerSection.module.scss";
 
 interface ActiveTrailerProps {
-  activeTrailer: Trailer | null;
-  recetTrailers: Function;
+  film: Trailer | null;
+  changeTrailer: Function;
+  getTranslateValue: string;
 }
 
 const ActiveTrailer: React.FC<ActiveTrailerProps> = ({
-  activeTrailer,
-  recetTrailers,
+  film,
+  changeTrailer,
+  getTranslateValue,
 }) => {
-  useEffect(() => recetTrailers(), []);
   return (
-    <div className={styles.activeTrailer}>
+    <div
+      className={`${styles.imgWrapper} ${styles.activeTrailer} `}
+      onClick={(event) => {
+        changeTrailer(event, film);
+      }}
+    >
       <img
-        src={`/Trailers/${activeTrailer?.poster}`}
+        src={`/Trailers/${film?.poster}`}
         width={"256px"}
         height={"152px"}
-        alt={activeTrailer?.name}
+        alt={film?.name}
         loading="lazy"
       />
+      <div
+        className={`${styles.line} `}
+        style={{ transform: `translate(${getTranslateValue})` }}
+      ></div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 .wrapper {
   background-position: center center;
+  background-repeat: no-repeat;
   margin-top: 16px;
 }
 
@@ -10,6 +11,10 @@
     linear-gradient(180deg, #09090c 0%, rgba(15, 15, 15, 0) 50%),
     linear-gradient(90deg, #09090c 21.09%, rgba(9, 9, 12, 0) 50%);
   margin-bottom: 48px;
+  .logo {
+    margin-bottom: 16px;
+    font-size: 50px;
+  }
   .info {
     position: absolute;
     bottom: 0px;
@@ -43,11 +48,16 @@
 }
 
 .trailers {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   column-gap: 16px;
   margin-top: 24px;
+  // overflow-x: hidden;
+  // scroll-behavior: smooth;
+  // overflow: hidden;
+  // width: 2700px;
   &:hover {
     cursor: pointer;
   }
@@ -63,6 +73,7 @@
     background-color: rgba(9, 9, 12, 0.5);
   }
   img {
+    position: static;
     border-radius: 16px;
     object-fit: cover;
   }
@@ -70,20 +81,17 @@
 
 .activeTrailer {
   position: relative;
-}
-
-.activeTrailer::after {
-  content: "";
-  position: absolute;
-  width: 177px;
-  height: 4px;
-  top: 100%;
-  left: 0;
-  // translate: 50%;
-  transition-duration: 0.2s;
-  background-size: cover;
-  border-radius: 7px;
-  background: var(--gradient-second);
+  .line {
+    position: absolute;
+    width: 177px;
+    height: 4px;
+    top: 100%;
+    left: 0%;
+    background-size: cover;
+    border-radius: 7px;
+    background: var(--gradient-second);
+    transition: transform 1s ease;
+  }
 }
 
 .fadeOut {
