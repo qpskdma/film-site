@@ -13,7 +13,7 @@ const FilmItem: React.FC<FilmItemProps> = ({ film }) => {
       {film.newSeason ? <p className={styles.newSeason}>Новый сезон</p> : null}
       <img
         className={styles.poster}
-        src={film.poster}
+        src={`/New/${film.poster}`}
         alt=""
         width={"200px"}
         height={"200px"}

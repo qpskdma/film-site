@@ -13,7 +13,7 @@ export const trailers: Trailer[] = [
   {
     logo: true,
     name: "Avatar",
-    poster: "Avatar.png",
+    poster: "Avatar.jfif",
     rating: 7.9,
     year: 2024,
     genre: "Фентези",

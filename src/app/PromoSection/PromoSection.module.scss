@@ -1,4 +1,5 @@
 .container {
+  height: 370px;
   background: #0d0d10;
   border-radius: 20px;
   margin-bottom: 80px;
@@ -9,24 +10,26 @@
   margin-right: 64px;
   overflow: hidden;
   .textContainer {
-    width: 1080px;
+    position: relative;
+    width: 45.76%;
     padding: 52px 0px 40px 52px;
   }
   .title {
+    position: absolute;
+    white-space: nowrap;
     font-family: var(--font-druk-wide-cy);
     text-transform: uppercase;
     font-size: 42px;
     font-weight: 700;
-    margin-bottom: 32px;
   }
   .profits {
-    width: 42.71%;
     display: grid;
     grid-template-columns: 48.05% 48.05%;
     grid-template-rows: 1;
     grid-row-gap: 16px;
     grid-column-gap: 32px;
     margin-bottom: 52px;
+    margin-top: 82px;
     div {
       display: flex;
       flex-direction: row;
@@ -51,10 +54,13 @@
 }
 
 .postersContainer {
-  width: 500px;
-  display: flex;
-  flex-direction: column;
+  width: 10px;
+  display: grid;
+  grid-template-rows: 108px 152px 57px;
   row-gap: 20px;
+  img {
+    object-fit: cover;
+  }
 }
 
 .posters {
@@ -62,54 +68,22 @@
   flex-direction: row;
   flex-wrap: nowrap;
   column-gap: 20px;
-  img {
-    width: 269px;
-    object-fit: cover;
-  }
 }
 
 .postersTop {
-  position: relative;
-  overflow: hidden;
-  height: 108px;
+  justify-content: end;
   img {
-    bottom: 57px;
-  }
-  & > img:nth-child(3) {
-    width: 57px;
+    height: 108px;
   }
 }
 
 .postersMiddle {
-  position: relative;
-  overflow: hidden;
-  img {
-  }
-  & > img:nth-child(3) {
-    width: 150px;
-  }
+  justify-content: center;
 }
 
 .postersBottom {
-  position: relative;
-  overflow: visible;
-  width: 279px;
+  justify-content: start;
   img {
-    position: absolute;
     height: 57px;
-  }
-  & > img:nth-child(1) {
-    left: -268px;
-  }
-  & > img:nth-child(2) {
-    left: 31px;
-  }
-  & > img:nth-child(3) {
-    left: 330px;
-  }
-  & > img:nth-child(4) {
-    width: 30px;
-    left: 629px;
-    object-fit: cover;
   }
 }

@@ -34,20 +34,82 @@ const PromoSection: React.FC<PromoSectionProps> = ({}) => {
       </div>
       <div className={styles.postersContainer}>
         <div className={`${styles.posters} ${styles.postersTop}`}>
-          <img src="/Promo/Elite.jfif" alt="" loading="lazy" />
-          <img src="/Promo/Emily.png" alt="" loading="lazy" />
-          <img src="/Promo/SweetHome.png" alt="" loading="lazy" />
+          <img
+            width={"269px"}
+            height={"165px"}
+            src="/Promo/Elite.jfif"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            width={"269px"}
+            height={"165px"}
+            src="/Promo/Emily.jfif"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            width={"269px"}
+            height={"165px"}
+            src="/Promo/SweetHome.jfif"
+            alt=""
+            loading="lazy"
+          />
         </div>
         <div className={`${styles.posters} ${styles.postersMiddle}`}>
-          <img src="/Promo/SweetHome.png" alt="" loading="lazy" />
-          <img src="/Promo/GoodDoctor.jfif" alt="" loading="lazy" />
-          <img src="/Promo/Elite.jfif" alt="" loading="lazy" />
+          <div>
+            <img
+              width={"269px"}
+              height={"165px"}
+              src="/Promo/SweetHome.jfif"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              width={"269px"}
+              height={"165px"}
+              src="/Promo/GoodDoctor.jfif"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              width={"269px"}
+              height={"165px"}
+              src="/Promo/Elite.jfif"
+              alt=""
+              loading="lazy"
+            />
+          </div>
         </div>
         <div className={`${styles.posters} ${styles.postersBottom}`}>
-          <img src="/Promo/GoodDoctor.jfif" alt="" loading="lazy" />
-          <img src="/Promo/Emily.png" alt="" loading="lazy" />
-          <img src="/Promo/SweetHome.png" alt="" loading="lazy" />
-          <img src="/Promo/Emily.png" alt="" loading="lazy" />
+          <img
+            width={"269px"}
+            height={"165px"}
+            src="/Promo/GoodDoctor.jfif"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            width={"269px"}
+            height={"165px"}
+            src="/Promo/Emily.jfif"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            width={"269px"}
+            height={"165px"}
+            src="/Promo/SweetHome.jfif"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            width={"269px"}
+            height={"165px"}
+            src="/Promo/Emily.jfif"
+            alt=""
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

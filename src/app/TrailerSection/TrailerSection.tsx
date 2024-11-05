@@ -19,8 +19,7 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
     }
   }, [trailers]);
 
-  const changeTrailer = (event: MouseEvent, film: Trailer, index: number) => {
-    // const rect = divRef.current.getBoundingClientRect();
+  const changeTrailer = (film: Trailer, index: number) => {
     if (film.name !== activeTrailer?.name) {
       const num = activeIndex - index;
       setActiveIndex(index);
@@ -30,7 +29,7 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
         setActiveTrailer(film);
         setIsFadingOut(false);
         setTranslateIndex("0px");
-      }, 1000);
+      }, 900);
     }
   };
 
@@ -51,6 +50,7 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
                 className={`${styles.logo} ${
                   isFadingOut ? styles.descOut : styles.descIn
                 }`}
+                loading="lazy"
               />
             ) : (
               <h1
@@ -83,7 +83,7 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
                       <ActiveTrailer
                         film={activeTrailer}
                         changeTrailer={changeTrailer}
-                        getTranslateValue={translateIndex}
+                        translateValue={translateIndex}
                       />
                     </div>
                   );
@@ -92,8 +92,8 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
                     <div
                       key={index}
                       className={styles.imgWrapper}
-                      onClick={(event) => {
-                        changeTrailer(event, element, index);
+                      onClick={() => {
+                        changeTrailer(element, index);
                       }}
                     >
                       <img

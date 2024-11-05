@@ -5,13 +5,13 @@ import styles from "./TrailerSection.module.scss";
 interface ActiveTrailerProps {
   film: Trailer | null;
   changeTrailer: Function;
-  getTranslateValue: string;
+  translateValue: string;
 }
 
 const ActiveTrailer: React.FC<ActiveTrailerProps> = ({
   film,
   changeTrailer,
-  getTranslateValue,
+  translateValue,
 }) => {
   return (
     <div
@@ -28,8 +28,8 @@ const ActiveTrailer: React.FC<ActiveTrailerProps> = ({
         loading="lazy"
       />
       <div
-        className={`${styles.line} `}
-        style={{ transform: `translate(${getTranslateValue})` }}
+        className={styles.line}
+        style={{ transform: `translate(${translateValue})` }}
       ></div>
     </div>
   );
