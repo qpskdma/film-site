@@ -1,5 +1,5 @@
-"use client";
-// import type { Metadata } from "next";
+// "use client";
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
 import Header from "./Header/Header";
@@ -16,9 +16,9 @@ const drukWide = localFont({
   weight: "100 900",
 });
 
-// export const metadata: Metadata = {
-//   title: "TVOE",
-// };
+export const metadata: Metadata = {
+  title: "TVOE",
+};
 
 export default function RootLayout({
   children,
@@ -27,7 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      {/* <body> */}
       <body className={`${normsPro.variable} ${drukWide.variable}`}>
         <Header />
         {children}

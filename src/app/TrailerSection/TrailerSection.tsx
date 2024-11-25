@@ -35,7 +35,7 @@ const TrailerSection: React.FC = () => {
     <div
       className={styles.wrapper}
       style={{
-        backgroundImage: `url("/Trailers/${activeTrailer?.poster}")`,
+        backgroundImage: `url("${activeTrailer?.poster}")`,
       }}
     >
       <div className={isFadingOut ? styles.fadeOut : styles.fadeIn}>
