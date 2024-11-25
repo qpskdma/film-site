@@ -14,7 +14,7 @@ const ActiveTrailer: React.FC<ActiveTrailerProps> = ({
   return (
     <div className={`${styles.imgWrapper} ${styles.activeTrailer} `}>
       <img
-        src={`/Trailers/${film?.poster}`}
+        src={`${film?.poster}`}
         width={"256px"}
         height={"152px"}
         alt={film?.name}

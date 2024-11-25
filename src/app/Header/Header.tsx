@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <img src="/Logo.svg" alt="" loading="lazy" />
+        <img src="Logo.svg" alt="" loading="lazy" />
       </div>
       <ul className={styles.navContainer}>
         <li className={styles.active}>
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
       <ul className={styles.btnsContainer}>
         <li>
           <button className="defaultBtn">
-            <img src="./Download.svg" alt="Download" loading="lazy" />
+            <img src="Download.svg" alt="Download" loading="lazy" />
             Установить
           </button>
         </li>
@@ -36,7 +36,7 @@ const Header: React.FC = () => {
         <li>
           <button className="defaultBtn">
             <img
-              src="./Promo1.svg"
+              src="Promo1.svg"
               alt=""
               loading="lazy"
               className={styles.promo}
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
         </li>
         <li>
           <button className={styles.search}>
-            <img src="/Search.svg" alt="" loading="lazy" />
+            <img src="Search.svg" alt="" loading="lazy" />
           </button>
         </li>
         <li>

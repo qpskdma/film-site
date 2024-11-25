@@ -50,7 +50,7 @@ const TopSection: React.FC = () => {
               <div className={styles.filmWrapper} key={i}>
                 <div>
                   <img
-                    src={`/Top/${i + 1}.svg`}
+                    src={`${i + 1}.svg`}
                     alt={`place${i + 1}`}
                     loading="lazy"
                   />
@@ -58,7 +58,7 @@ const TopSection: React.FC = () => {
                 <img
                   width={"300px"}
                   height={"450px"}
-                  src={`/Top/${e}`}
+                  src={`${e}`}
                   alt={e}
                   className={styles.filmPoster}
                 />

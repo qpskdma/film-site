@@ -94,7 +94,7 @@ const TrailerSection: React.FC = () => {
                       }}
                     >
                       <img
-                        src={`/Trailers/${element.poster}`}
+                        src={`${element.poster}`}
                         width={"256px"}
                         height={"152px"}
                         alt={element.name}
