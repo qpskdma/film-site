@@ -8,9 +8,6 @@ import FilmItem from "./FilmItem";
 interface NewSectionProps {}
 
 const NewSection: React.FC<NewSectionProps> = ({}) => {
-  // const [recentFilms, setRecentFilms] = useState<Films[]>([]);
-  // useEffect(() => setRecentFilms(films), []);
-
   return (
     <div className={styles.container}>
       <p className={styles.title}>Новинки</p>

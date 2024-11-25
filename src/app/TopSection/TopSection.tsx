@@ -22,6 +22,14 @@ const TopSection: React.FC<TopSectionProps> = ({}) => {
       setShowPrevButton(true);
     }
   };
+
+  const films = [
+    "BeautifulDisaster.png",
+    "Startrack.jfif",
+    "JonUik.jfif",
+    "MovingCastle.jfif",
+    "RedNotice.jfif",
+  ];
   return (
     <div>
       <p className={styles.title}>ТОП-10 НЕДЕЛИ</p>
@@ -39,64 +47,26 @@ const TopSection: React.FC<TopSectionProps> = ({}) => {
               <img src="ArrowRight.svg" alt="" />
             </button>
           </div>
-          <div className={styles.filmWrapper}>
-            <div>
-              <img src="/Top/1.svg" alt="" loading="lazy" />
-            </div>
-            <img
-              width={"300px"}
-              height={"450px"}
-              src="/Top/BeautifulDisaster.png"
-              alt=""
-            />
-          </div>
-          <div className={styles.filmWrapper}>
-            <div>
-              <img src="/Top/2.svg" alt="" loading="lazy" />
-            </div>
-            <img
-              width={"300px"}
-              height={"450px"}
-              src="/Top/Startrack.jfif"
-              alt=""
-            />
-          </div>
-          <div className={styles.filmWrapper}>
-            <div>
-              <img src="/Top/3.svg" alt="" loading="lazy" />
-            </div>
-            <img
-              width={"300px"}
-              height={"450px"}
-              src="/Top/JonUik.jfif"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-          <div className={styles.filmWrapper}>
-            <div>
-              <img src="/Top/4.svg" alt="" loading="lazy" />
-            </div>
-            <img
-              width={"300px"}
-              height={"450px"}
-              src="/Top/MovingCastle.jfif"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-          <div className={styles.filmWrapper}>
-            <div>
-              <img src="/Top/5.svg" alt="" loading="lazy" />
-            </div>
-            <img
-              width={"300px"}
-              height={"450px"}
-              src="/Top/RedNotice.jfif"
-              alt=""
-              loading="lazy"
-            />
-          </div>
+          {films.map((e, i) => {
+            return (
+              <div className={styles.filmWrapper} key={i}>
+                <div>
+                  <img
+                    src={`/Top/${i + 1}.svg`}
+                    alt={`place${i + 1}`}
+                    loading="lazy"
+                  />
+                </div>
+                <img
+                  width={"300px"}
+                  height={"450px"}
+                  src={`/Top/${e}`}
+                  alt={e}
+                  className={styles.filmPoster}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

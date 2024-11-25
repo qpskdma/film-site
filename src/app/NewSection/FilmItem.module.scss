@@ -2,6 +2,7 @@
   position: relative;
   width: 14.5%;
   height: 25.3%;
+  min-width: 130px;
   display: flex;
   flex-direction: column;
   row-gap: 12px;
@@ -24,11 +25,13 @@
     margin: 0;
   }
   .newSeason {
+    text-wrap: nowrap;
     position: absolute;
-    top: 3.76%;
+    top: 3.5%;
     left: 22.86%;
-    width: 47.36%;
-    height: 7.06%;
+    width: auto;
+    height: auto;
+    padding: 3px 5px;
     background: #09090c99;
     border-radius: 8px;
     display: flex;

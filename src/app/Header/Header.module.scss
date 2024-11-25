@@ -2,10 +2,8 @@
 
 .container {
   font-family: url("../fonts/TTNormsPro-Bold.woff");
-  // width: 100vw;
   height: 76px;
   display: grid;
-  //   flex-direction: row;
   grid-template-columns: minmax(120px, 195px) 294px minmax(20px, 754px) 548px;
   grid-template-rows: 1;
   padding: 14px 64px 14px 0px;

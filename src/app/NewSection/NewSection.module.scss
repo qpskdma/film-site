@@ -13,3 +13,10 @@
   flex-direction: row;
   column-gap: 20px;
 }
+
+@media (max-width: 1000px) {
+  .filmContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
