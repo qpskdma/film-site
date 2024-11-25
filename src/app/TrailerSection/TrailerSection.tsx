@@ -41,24 +41,13 @@ const TrailerSection: React.FC = () => {
       <div className={isFadingOut ? styles.fadeOut : styles.fadeIn}>
         <div className={styles.background}>
           <div className={styles.info}>
-            {activeTrailer?.logo ? (
-              <img
-                src="/AvatarLogo.svg"
-                alt="Avatar"
-                className={`${styles.logo} ${
-                  isFadingOut ? styles.descOut : styles.descIn
-                }`}
-                loading="lazy"
-              />
-            ) : (
-              <h1
-                className={`${styles.logo} ${
-                  isFadingOut ? styles.descOut : styles.descIn
-                }`}
-              >
-                {activeTrailer?.name}
-              </h1>
-            )}
+            <h1
+              className={`${styles.logo} ${
+                isFadingOut ? styles.descOut : styles.descIn
+              }`}
+            >
+              {activeTrailer?.name}
+            </h1>
             {activeTrailer ? (
               <div
                 className={`${styles.description} ${

@@ -12,7 +12,7 @@ export interface Trailer {
 export const trailers: Trailer[] = [
   {
     logo: true,
-    name: "Avatar",
+    name: "Аватар",
     poster: "Avatar.jfif",
     rating: 7.9,
     year: 2024,
@@ -21,7 +21,7 @@ export const trailers: Trailer[] = [
     ageLimit: "16+",
   },
   {
-    name: "Focus",
+    name: "Фокус",
     poster: "Focus.jfif",
     rating: 7.1,
     year: 2015,
@@ -30,7 +30,7 @@ export const trailers: Trailer[] = [
     ageLimit: "16+",
   },
   {
-    name: "Instant Family",
+    name: "Семья по-быстрому",
     poster: "InstanteFamily.jfif",
     rating: 7.5,
     year: 2018,
@@ -39,7 +39,7 @@ export const trailers: Trailer[] = [
     ageLimit: "16+",
   },
   {
-    name: "War",
+    name: "Война",
     poster: "War.jfif",
     rating: 7.9,
     year: 2019,
@@ -48,7 +48,7 @@ export const trailers: Trailer[] = [
     ageLimit: "18+",
   },
   {
-    name: "Revenge of the Bridesmaids",
+    name: "Месть подружек невесты",
     poster: "Revenge.png",
     rating: 7,
     year: 2010,
@@ -57,7 +57,7 @@ export const trailers: Trailer[] = [
     ageLimit: "18+",
   },
   {
-    name: "While You Were Sleeping",
+    name: "Пока ты спал",
     poster: "WhileYouWereSleeping.jfif",
     rating: 7.7,
     year: 1995,
@@ -66,10 +66,10 @@ export const trailers: Trailer[] = [
     ageLimit: "18+",
   },
   {
-    name: "Funky Men",
+    name: "Джеймс Браун. Путь наверх",
     poster: "FunkyMen.jfif",
     rating: 6.9,
-    year: 2008,
+    year: 2014,
     genre: "Драма",
     country: "США",
     ageLimit: "18+",
