@@ -2,9 +2,7 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 
-interface FooterProps {}
-
-const Footer: React.FC<FooterProps> = ({}) => {
+const Footer: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.socialsWrapper}>

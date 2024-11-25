@@ -3,9 +3,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./TopSection.module.scss";
 
-interface TopSectionProps {}
-
-const TopSection: React.FC<TopSectionProps> = ({}) => {
+const TopSection: React.FC = () => {
   const movieContainerRef = useRef<HTMLDivElement>(null);
   const [showPrevButton, setShowPrevButton] = useState(false);
 

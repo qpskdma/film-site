@@ -1,13 +1,9 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./NewSection.module.scss";
 import { Film, films } from "./films";
 import FilmItem from "./FilmItem";
 
-interface NewSectionProps {}
-
-const NewSection: React.FC<NewSectionProps> = ({}) => {
+const NewSection: React.FC = () => {
   return (
     <div className={styles.container}>
       <p className={styles.title}>Новинки</p>

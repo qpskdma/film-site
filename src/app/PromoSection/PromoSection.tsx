@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./PromoSection.module.scss";
 
-interface PromoSectionProps {}
-
-const PromoSection: React.FC<PromoSectionProps> = ({}) => {
+const PromoSection: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
