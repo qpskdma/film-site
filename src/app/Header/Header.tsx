@@ -2,9 +2,7 @@ import React from "react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 
-interface HeaderProps {}
-
-const Header: React.FC<HeaderProps> = ({}) => {
+const Header: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>

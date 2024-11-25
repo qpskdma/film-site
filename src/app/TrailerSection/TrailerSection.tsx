@@ -4,9 +4,7 @@ import styles from "./TrailerSection.module.scss";
 import { Trailer, trailers } from "./trailers";
 import ActiveTrailer from "./ActiveTrailer";
 
-interface TrailerSectionProps {}
-
-const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
+const TrailerSection: React.FC = () => {
   const divRef = useRef(null);
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,7 +17,7 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
     }
   }, [trailers]);
 
-  const changeTrailer = (film: Trailer, index: number) => {
+  const changeTrailer = (film: Trailer, index: number): void => {
     if (film.name !== activeTrailer?.name) {
       const num = activeIndex - index;
       setActiveIndex(index);
@@ -82,7 +80,6 @@ const TrailerSection: React.FC<TrailerSectionProps> = ({}) => {
                     <div ref={divRef} key={index}>
                       <ActiveTrailer
                         film={activeTrailer}
-                        changeTrailer={changeTrailer}
                         translateValue={translateIndex}
                       />
                     </div>

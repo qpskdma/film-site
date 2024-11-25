@@ -4,22 +4,15 @@ import styles from "./TrailerSection.module.scss";
 
 interface ActiveTrailerProps {
   film: Trailer | null;
-  changeTrailer: Function;
   translateValue: string;
 }
 
 const ActiveTrailer: React.FC<ActiveTrailerProps> = ({
   film,
-  changeTrailer,
   translateValue,
 }) => {
   return (
-    <div
-      className={`${styles.imgWrapper} ${styles.activeTrailer} `}
-      onClick={(event) => {
-        changeTrailer(event, film);
-      }}
-    >
+    <div className={`${styles.imgWrapper} ${styles.activeTrailer} `}>
       <img
         src={`/Trailers/${film?.poster}`}
         width={"256px"}
